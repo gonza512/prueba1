@@ -1,4 +1,4 @@
-// assets/js/app.js - VERSIÓN MEJORADA CON MEJOR CONTROL DE INTERFAZ
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log(' app.js cargado - Iniciando sistema...');
     

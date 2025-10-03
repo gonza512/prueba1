@@ -58,10 +58,11 @@
     text-decoration: none;
 }
 
-.nav-btn:hover {
+/*.nav-btn:hover {
     background: #21867a;
     color: #f4a261;
 }
+*/
 
 /* ========================
    ESTILOS GLOBALES
@@ -111,11 +112,13 @@ nav h1 {
     text-decoration: none;
 }
 
-.btn-custom:hover {
+/*.btn-custom:hover {
     background-color: #f4a261;
     transform: translateY(-2px);
     color: #fff;
 }
+*/
+
 
 /* Variante secundaria */
 .btn-secondary-custom {
@@ -134,11 +137,13 @@ nav h1 {
     text-decoration: none;
 }
 
-.btn-secondary-custom:hover {
+/*.btn-secondary-custom:hover {
     background-color: #2a9d8f;
     transform: translateY(-2px);
     color: #fff;
 }
+*/
+
 
 /* ========================
    TARJETAS / CARDS
@@ -150,10 +155,10 @@ nav h1 {
     border: none;
 }
 
-.card:hover {
+/*.card:hover {
     transform: translateY(-5px);
 }
-
+*/
 /* ========================
    LINKS
 ======================== */
@@ -163,9 +168,10 @@ a {
     transition: color 0.3s;
 }
 
-a:hover {
+/*a:hover {
     color: #e76f51;
 }
+*/
 
 /* ========================
    FOOTER
@@ -238,11 +244,12 @@ footer p {
     transition: all 0.3s ease;
 }
 
-.sidebar .nav-link:hover {
+/* .sidebar .nav-link:hover {
     background-color: #2a9d8f;
     color: #fff;
     transform: translateX(5px);
 }
+*/
 
 /* ========================
    BOTONES GLOBAL - Selectores más específicos
@@ -263,10 +270,12 @@ a.btn-secondary-custom {
     border-radius: 12px;
 }
 
+/*
 .btn.btn-primary:hover {
     background-color: #f4a261;
     border-color: #f4a261;
 }
+*/
 
 .btn.btn-secondary {
     background-color: #264653;
@@ -274,10 +283,11 @@ a.btn-secondary-custom {
     border-radius: 12px;
 }
 
-.btn.btn-secondary:hover {
+/* .btn.btn-secondary:hover {
     background-color: #2a9d8f;
     border-color: #2a9d8f;
 }
+*/
 
 /* ========================
    FORMULARIOS
@@ -289,29 +299,9 @@ a.btn-secondary-custom {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-control:focus {
-    border-color: #2a9d8f;
-    box-shadow: 0 0 0 0.2rem rgba(42, 157, 143, 0.25);
-}
 
-/* ========================
-   UTILIDADES ADICIONALES
-======================== */
-.text-primary-custom {
-    color: #2a9d8f;
-}
 
-.text-secondary-custom {
-    color: #e76f51;
-}
 
-.bg-primary-custom {
-    background-color: #2a9d8f;
-}
-
-.bg-secondary-custom {
-    background-color: #e76f51;
-}
 
 /* ========================
    ANIMACIONES SUAVES
@@ -320,10 +310,6 @@ a.btn-secondary-custom {
     animation: fadeIn 0.5s ease-in;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* ========================
    ESTADOS DE VALIDACIÓN
@@ -334,16 +320,6 @@ a.btn-secondary-custom {
 
 .is-invalid {
     border-color: #e76f51;
-}
-
-.input-success {
-    border-color: #2a9d8f;
-    box-shadow: 0 0 0 0.2rem rgba(42, 157, 143, 0.25);
-}
-
-.input-error {
-    border-color: #e76f51;
-    box-shadow: 0 0 0 0.2rem rgba(231, 111, 81, 0.25);
 }
 
 .mensaje-error {

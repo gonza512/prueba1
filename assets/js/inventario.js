@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnOrden = document.getElementById("realizarOrden");
   const totalCarro = document.getElementById("totalCarro");
 
-  // 🔹 Productos fijos con imágenes, precio
+  //  Productos fijos con imágenes, precio
   const productos = [
     { producto: "Pedigree saco 5kg", imagen: "./assets/img/pedigree.png", precio: 9990 },
     { producto: "Juguete para gato", imagen: "./assets/img/juguetegato.jpg", precio: 3000 },
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Tu carrito está vacío.");
       return;
     }
-    alert("✅ Orden de compra generada con éxito.\nGracias por tu compra.");
+    alert(" Orden de compra generada con éxito.\nGracias por tu compra.");
     carro.length = 0;
     localStorage.setItem("carro", JSON.stringify(carro));
     mostrarCarro();

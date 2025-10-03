@@ -15,9 +15,10 @@
     <div class="d-flex">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <header>
+            <!-- CAMBIO: div en vez de header para el título del sidebar -->
+            <div class="sidebar-header">
                 <h3>VetHome</h3>
-            </header>
+            </div>
             <nav>
                 <ul class="nav flex-column" id="menuLateral">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -26,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="detalle_producto.html">Detalle Producto</a></li>
                     <li class="nav-item" id="adminMenu"><a class="nav-link" href="admin.html">Admin</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inventario.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Carrito</a></li>
                     <li class="nav-item"><a class="nav-link" href="mascotas.html">Mascotas</a></li>
                     <li class="nav-item"><a class="nav-link" href="consultas.html">Consultas</a></li>
                     <li class="nav-item"><a class="nav-link" href="resenas.html">Reseñas</a></li>
@@ -41,6 +42,7 @@
 
         <!-- Contenido principal -->
         <main class="flex-grow-1 p-4">
+            <!-- ÚNICO header semántico de la página -->
             <header class="text-center mb-4">
                 <h1>¡Bienvenido a la veterinaria VetHome!</h1>
                 <img src="./assets/img/clínica-veterinaria.jpg" alt="Bienvenida VetHome"
@@ -77,13 +79,13 @@
 
             <section id="inventario" class="container mt-5">
                 <h2 class="text-center">Inventario de la tienda</h2>
-                <p class="text-center">Aquí podrás visualizar nuestro inventario para solicitar la compra
-                    presencialmente.</p>
+                <p class="text-center">Aquí podrás visualizar nuestros productos así de esta forma realizar compras.</p>
                 <div class="text-center mb-4">
-                    <a href="inventario.html" class="btn-custom btn-servicio">Ver Stock Disponible</a>
+                    <a href="inventario.html" class="btn-custom btn-servicio">Ver Carrito</a>
                 </div>
             </section>
 
+            <!-- ÚNICO footer semántico de la página -->
             <footer class="mt-5 text-center">
                 <p>&copy; 2025 VetHome - Todos los derechos reservados</p>
             </footer>
@@ -95,15 +97,17 @@
         aria-labelledby="loginRequiredLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <header class="modal-header">
+                <!-- CAMBIO: div en vez de header para modal -->
+                <div class="modal-header">
                     <h1 class="modal-title fs-5" id="loginRequiredLabel">Acceso restringido</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </header>
+                </div>
                 <div class="modal-body">Debes iniciar sesión para acceder a este servicio.</div>
-                <footer class="modal-footer">
+                <!-- CAMBIO: div en vez de footer para modal -->
+                <div class="modal-footer">
                     <a href="login.html" class="btn-custom">Ir a Iniciar Sesión</a>
                     <button type="button" class="btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
-                </footer>
+                </div>
             </div>
         </div>
     </div>
@@ -112,17 +116,19 @@
     <div class="modal fade" id="modal-perfil" tabindex="-1" aria-labelledby="modal-perfil-label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <header class="modal-header">
+                <!-- CAMBIO: div en vez de header para modal -->
+                <div class="modal-header">
                     <h5 class="modal-title" id="modal-perfil-label">Datos de tu perfil</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </header>
+                </div>
                 <div class="modal-body">
                     <p><strong>Nombre:</strong> <span id="perfil-modal-nombre"></span></p>
                     <p><strong>RUT:</strong> <span id="perfil-modal-rut"></span></p>
                 </div>
-                <footer class="modal-footer">
+                <!-- CAMBIO: div en vez de footer para modal -->
+                <div class="modal-footer">
                     <button type="button" class="btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
-                </footer>
+                </div>
             </div>
         </div>
     </div>
