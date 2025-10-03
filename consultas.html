@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas Médicas - VetHome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- SIDEBAR -->
+        <aside class="sidebar bg-dark text-white p-3">
+            <h3 class="text-center mb-4">VetHome</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="mascotas.html">Mascotas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="consultas.html">Consultas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="resenas.html">Reseñas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="inventario.html">Inventario</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-grow-1 p-4">
+            <header class="text-center mb-4">
+                <h1>Agendar Consulta Médica</h1>
+            </header>
+
+            <section class="container">
+                <form id="formConsulta" novalidate>
+                    <div class="mb-3">
+                        <label for="mascota" class="form-label">Nombre de la mascota</label>
+                        <input type="text" class="form-control" id="mascota" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motivo" class="form-label">Motivo</label>
+                        <textarea id="motivo" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-custom">Agendar</button>
+                </form>
+
+                <section class="mt-4">
+                    <h3>Consultas agendadas</h3>
+                    <ul id="listaConsultas" class="list-group"></ul>
+                </section>
+
+                <nav class="mt-3">
+                    <a href="index.html" class="btn-secondary-custom">Volver al inicio</a>
+                </nav>
+            </section>
+        </main>
+    </div>
+
+    <script src="./assets/js/consultas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

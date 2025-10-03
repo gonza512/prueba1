@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetHome</title>
+
+    <!-- Bootstrap solo para grid -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header>
+                <h3>VetHome</h3>
+            </header>
+            <nav>
+                <ul class="nav flex-column" id="menuLateral">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle_producto.html">Detalle Producto</a></li>
+                    <li class="nav-item" id="adminMenu"><a class="nav-link" href="admin.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mascotas.html">Mascotas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consultas.html">Consultas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resenas.html">Reseñas</a></li>
+                    <li class="nav-item" id="loginMenu"><a class="nav-link" href="login.html">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" id="perfil-link" href="#verperfil">Ver Perfil</a></li>
+                </ul>
+            </nav>
+            <div id="logoutContainer" class="text-center mt-4 d-none">
+                <button id="logoutBtn" class="btn-secondary-custom w-100">Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="flex-grow-1 p-4">
+            <header class="text-center mb-4">
+                <h1>¡Bienvenido a la veterinaria VetHome!</h1>
+                <img src="./assets/img/clínica-veterinaria.jpg" alt="Bienvenida VetHome"
+                    class="img-fluid rounded shadow mt-3">
+            </header>
+
+            <section id="inicio" class="container mt-3">
+                <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            </section>
+
+            <section id="mascotas" class="container mt-5">
+                <h2 class="text-center">Registro de Mascotas</h2>
+                <p class="text-center">Aquí podrás registrar tu mascota.</p>
+                <div class="text-center mb-4">
+                    <a href="mascotas.html" class="btn-custom btn-servicio">Registrar Mascotas</a>
+                </div>
+            </section>
+
+            <section id="consultas" class="container mt-5">
+                <h2 class="text-center">Consultas Médicas</h2>
+                <p class="text-center">Aquí podrás agendar y ver tus consultas médicas.</p>
+                <div class="text-center mb-4">
+                    <a href="consultas.html" class="btn-custom btn-servicio">Agendar Consulta</a>
+                </div>
+            </section>
+
+            <section id="reseñas" class="container mt-5">
+                <h2 class="text-center">Reseñas de Clientes</h2>
+                <p class="text-center">Aquí los clientes pueden dejar sus comentarios y calificaciones.</p>
+                <div class="text-center mb-4">
+                    <a href="resenas.html" class="btn-custom btn-servicio">Agregar/Ver Reseñas</a>
+                </div>
+            </section>
+
+            <section id="inventario" class="container mt-5">
+                <h2 class="text-center">Inventario de la tienda</h2>
+                <p class="text-center">Aquí podrás visualizar nuestro inventario para solicitar la compra
+                    presencialmente.</p>
+                <div class="text-center mb-4">
+                    <a href="inventario.html" class="btn-custom btn-servicio">Ver Stock Disponible</a>
+                </div>
+            </section>
+
+            <footer class="mt-5 text-center">
+                <p>&copy; 2025 VetHome - Todos los derechos reservados</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modal sesión requerida -->
+    <div class="modal fade" id="loginRequiredModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="loginRequiredLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginRequiredLabel">Acceso restringido</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </header>
+                <div class="modal-body">Debes iniciar sesión para acceder a este servicio.</div>
+                <footer class="modal-footer">
+                    <a href="login.html" class="btn-custom">Ir a Iniciar Sesión</a>
+                    <button type="button" class="btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal perfil -->
+    <div class="modal fade" id="modal-perfil" tabindex="-1" aria-labelledby="modal-perfil-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h5 class="modal-title" id="modal-perfil-label">Datos de tu perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </header>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> <span id="perfil-modal-nombre"></span></p>
+                    <p><strong>RUT:</strong> <span id="perfil-modal-rut"></span></p>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    
+</body>
+
+</html>
